@@ -1,0 +1,9 @@
+{
+  "stage": "Stage.GENERATE_TRAINING_DATA",
+  "stage_status": "StageStatus.FINISHED",
+  "detail": {
+    "processed_data": 1,
+    "total_data": 1,
+    "script_status": "ScriptStatus.ACTIVE"
+  }
+}

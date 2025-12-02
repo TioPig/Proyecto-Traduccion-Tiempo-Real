@@ -1,0 +1,2 @@
+Certificate is saved at: C:\Certbot\live\tiopig.ddns.net\fullchain.pem
+Key is saved at:         C:\Certbot\live\tiopig.ddns.net\privkey.pem

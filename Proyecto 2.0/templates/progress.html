@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Progreso de Entrenamiento Tesseract</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .progress { height: 25px; }
+        .time-info { font-size: 0.9rem; color: #6c757d; }
+        .stage-list { list-style-type: none; padding-left: 0; }
+        .stage-list li { margin-bottom: 5px; }
+        .stage-completed { color: #28a745; }
+        .stage-current { color: #007bff; font-weight: bold; }
+        .stage-pending { color: #6c757d; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Progreso de Entrenamiento Tesseract</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Etapa actual: <span id="current-stage">{{ current_stage }}</span></h5>
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: {{ percentage }}%;" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100">
+                        <span id="percentage">{{ percentage }}%</span>
+                    </div>
+                </div>
+                <div class="row time-info invisible">
+                    <div class="col-md-6">
+                        <p><strong>Tiempo transcurrido:</strong> <span id="elapsed-time">{{ elapsed_time }}</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Tiempo restante estimado:</strong> <span id="remaining-time">{{ remaining_time }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Etapas del Proceso</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>Etapas Completadas</h6>
+                        <ul class="stage-list" id="completed-stages">
+                            {% for stage in completed_stages %}
+                            <li class="stage-completed">✓ {{ stage }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Etapa Actual</h6>
+                        <ul class="stage-list">
+                            <li class="stage-current">➤ <span id="current-stage-2">{{ current_stage }}</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Etapas Pendientes</h6>
+                        <ul class="stage-list" id="pending-stages">
+                            {% for stage in pending_stages %}
+                            <li class="stage-pending">○ {{ stage }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function updateProgress() {
+            $.getJSON('/update_progress', function(data) {
+                $('#current-stage, #current-stage-2').text(data.current_stage);
+                $('#percentage').text(data.percentage.toFixed(2) + '%');
+                $('.progress-bar').css('width', data.percentage + '%').attr('aria-valuenow', data.percentage);
+                $('#elapsed-time').text(data.elapsed_time);
+                $('#remaining-time').text(data.remaining_time);
+               
+                $('#completed-stages').empty();
+                data.completed_stages.forEach(function(stage) {
+                    $('#completed-stages').append('<li class="stage-completed">✓ ' + stage + '</li>');
+                });
+                $('#pending-stages').empty();
+                data.pending_stages.forEach(function(stage) {
+                    $('#pending-stages').append('<li class="stage-pending">○ ' + stage + '</li>');
+                });
+            });
+        }
+
+        $(document).ready(function() {
+            updateProgress(); // Initial update
+            setInterval(updateProgress, 1000); // Update every second
+        });
+    </script>
+</body>
+</html>

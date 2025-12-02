@@ -1,0 +1,64 @@
+2024-10-23 20:18:19,740 - INFO - Reanudando entrenamiento desde la sub-etapa: run_mftraining
+2024-10-23 20:18:19,740 - INFO - Ejecutando etapa: run_mftraining
+2024-10-23 20:18:19,740 - INFO - Ejecutando mftraining
+2024-10-23 20:18:19,807 - INFO - Ejecutando comando: ['mftraining.exe', '-F', 'tesseract_output\\font_properties', '-X', 'tesseract_output\\xheights', '-U', 'tesseract_output\\pvz.unicharset', '-O', 'tesseract_output\2024-10-23 20:18:19,807 - INFO - Ejecutando comando: ['mftraining.exe', '-F', 'tesseract_output\\font_properties', '-X', 'tesseract_output\\xheights', '-U', 'tesseract_output\\pvz.unicharset', '-O', 'tesseract_output\\pvz.0.', '-D', 'tesseract_output', 'tesseract_output\\Not_12\\p0000.tr', 'tesseract_output\\Not_12\\p0001.tr', 'tesseract_output\\Not_12\\p0002.tr', 'tesseract_output\\Not_12\\p0003.tr', 'tesseract_output\\Not_12\\p0004.tr', 'tesseract_output\\Not_12\\p0005.tr', 'tesseract_output\\Not_12\\p0006.tr', 'tesseract_output\\Not_12\\p0007.tr', 'tesseract_output\\Not_12\\p0008.tr', 'tesseract_output\\Not_12\\p0009.tr', 'tesseract_output\\Not_12\\p0010.tr', 'tesseract_output\\Not_12\\p0011.tr', 'tesseract_output\\Not_12\\p0012.tr', 'tesseract_output\\Not_12\\p0013.tr', 'tesseract_output\\Not_12\\p0014.tr', 'tesseract_output\\Not_12\\p0015.tr', 'tesseract_output\\Not_12\\p0016.tr', 'tesseract_output\\Not_12\\p0017.tr', 'tesseract_output\\Not_12\\p0018.tr', 'tesseract_output\\Not_12\\p0019.tr', 'tesseract_output\\Not_12\\p0020.tr', 'tesseract_output\\Not_12\\p0021.tr', 'tesseract_output\\Not_12\\p0022.tr', 'tesseract_output\\Not_12\\p0023.tr', 'tesseract_output\\Not_12\\p0024.tr', 'tesseract_output\\Not_12\\p0025.tr', 'tesseract_output\\Not_12\\p0026.tr', 'tesseract_output\\Not_12\\p0027.tr', 'tesseract_output\\Not_12\\p0028.tr', 'tesseract_output\\Not_12\\p0029.tr', 'tesseract_output\\Not_12\\p0030.tr', 'tesseract_output\\Not_12\\p0031.tr', 'tesseract_output\\Not_12\\p0032.tr', 'tesseract_output\\Not_12\\p0033.tr', 'tesseract_output\\Not_12\\p0034.tr', 'tesseract_output\\Not_12\\p0035.tr', 'tesseract_output\\Not_12\\p0036.tr', 'tesseract_output\\Not_12\\p0037.tr', 'tesseract_output\\Not_12\\p0038.tr', 'tesseract_output\\Not_12\\p0039.tr', 'tesseract_output\\Not_12\\p0040.tr', 'tesseract_output\\Not_12\\p0041.tr', 'tesseract_output\\Not_12\\p0042.tr', 'tesseract_output\\Not_12\\p0043.tr', 'tesseract_output\\Not_12\\p0044.tr', 'tesseract_output\\Not_12\\p0045.tr', 'tesseract_output\\Not_12\\p0046.tr', 'tesseract_output\\Not_12\\p0047.tr', 'tesseract_output\\Not_12\\p0048.tr', 'tesseract_output\\Not_12\\p0049.tr', 'tesseract_output\\Not_12\\p0050.tr', 'tesseract_output\\Not_12\\p0051.tr', 'tesseract_output\\Not_12\\p0052.tr', 'tesseract_output\\Not_12\\p0053.tr', 'tesseract_output\\Not_12\\p0054.tr', 'tesseract_output\\Not_12\\p0055.tr', 'tesseract_output\\Not_12\\p0056.tr', 'tesseract_output\\Not_12\\p0057.tr', 'tesseract_output\\Not_12\\p0058.tr', 'tesseract_output\\Not_12\\p0059.tr', 'tesseract_output\\Not_12\\p0060.tr', 'tesseract_output\\Not_12\\p0061.tr', 'tesseract_output\\Not_12\\p0062.tr', 'tesseract_output\\Not_12\\p0063.tr', 'tesseract_output\\Not_12\\p0064.tr', 'tesseract_output\\Not_12\\p0065.tr', 'tesseract_output\\Not_12\\p0066.tr', 'tesseract_output\\Not_12\\p0067.tr', 'tesseract_output\\Not_12\\p0068.tr', 'tesseract_output\\Not_12\\p0069.tr', 'tesseract_output\\Not_12\\p0070.tr', 'tesseract_output\\Not_12\\p0071.tr', 'tesseract_output\\Not_12\\p0072.tr', 'tesseract_output\\Not_12\\p0073.tr', 'tesseract_o2024-10-23 20:18:20,486 - INFO - Salida: 
+2024-10-23 20:18:20,487 - ERROR - Error (c骴igo 1): Read shape table tesseract_output/shapetable of 0 shapes
+fontinfo table is of size 16038
+Reading x-heights from tesseract_output\xheights ...
+No valid xheights in tesseract_output\xheights!
+
+2024-10-23 20:18:20,487 - ERROR - Error en mftraining para el lote 0
+2024-10-23 20:18:20,488 - ERROR - Salida est醤dar: 
+2024-10-23 20:18:20,488 - ERROR - Salida de error: Read shape table tesseract_output/shapetable of 0 shapes
+fontinfo table is of size 16038
+Reading x-heights from tesseract_output\xheights ...
+No valid xheights in tesseract_output\xheights!
+
+2024-10-23 20:18:20,488 - ERROR - Excepci髇 en mftraining: Error en el lote 0
+2024-10-23 20:18:20,489 - ERROR - Detalles del error: Traceback (most recent call last):
+  File "c:\Users\talol\Desktop\Proyecto Traduccion Tiempo Real\train_tesseract_pvz.py", line 417, in stage_run_mftraining
+    raise Exception(f"Error en el lote {i//batch_size}")
+Exception: Error en el lote 0
+
+2024-10-23 20:18:20,491 - ERROR - Error en la etapa run_mftraining: Fallo en la etapa: run_mftraining
+7.tr', 'tesseract_output\\Not_12\\p0018.tr', 'tesseract_output\\Not_12\\p0019.tr', 'tesseract_output\\Not_12\\p0020.tr', 'tesseract_output\\Not_12\\p0021.tr', 'tesseract_output\\Not_12\\p0022.tr', 'tesseract_output\\Not_12\\p0023.tr', 'tesseract_output\\Not_12\\p0024.tr', 'tesseract_output\\Not_12\\p0025.tr', 'tesseract_output\\Not_12\\p0026.tr', 'tesseract_output\\Not_12\\p0027.tr', 'tesseract_output\\Not_12\\p0028.tr', 'tesseract_output\\Not_12\\p0029.tr', 'tesseract_output\\Not_12\\p0030.tr', 'tesseract_output\\Not_12\\p0031.tr', 'tesseract_output\\Not_12\\p0032.tr', 'tesseract_output\\Not_12\\p0033.tr', 'tesseract_output\\Not_12\\p0034.tr', 'tesseract_output\\Not_12\\p0035.tr', 'tesseract_output\\Not_12\\p0036.tr', 'tesseract_output\\Not_12\\p0037.tr', 'tesseract_output\\Not_12\\p0038.tr', 'tesseract_output\\Not_12\\p0039.tr', 'tesseract_output\\Not_12\\p0040.tr', 'tesseract_output\\Not_12\\p0041.tr', 'tesseract_output\\Not_12\\p0042.tr', 'tesseract_output\\Not_12\\p0043.tr', 'tesseract_output\\Not_12\\p0044.tr', 'tesseract_output\\Not_12\\p0045.tr', 'tesseract_output\\Not_12\\p0046.tr', 'tesseract_output\\Not_12\\p0047.tr', 'tesseract_output\\Not_12\\p0048.tr', 'tesseract_output\\Not_12\\p0049.tr', 'tesseract_output\\Not_12\\p0050.tr', 'tesseract_output\\Not_12\\p0051.tr', 'tesseract_output\\Not_12\\p0052.tr', 'tesseract_output\\Not_12\\p0053.tr', 'tesseract_output\\Not_12\\p0054.tr', 'tesseract_output\\Not_12\\p0055.tr', 'tesseract_output\\Not_12\\p0056.tr', 'tesseract_output\\Not_12\\p0057.tr', 'tesseract_output\\Not_12\\p0058.tr', 'tesseract_output\\Not_12\\p0059.tr', 'tesseract_output\\Not_12\\p0060.tr', 'tesseract_output\\Not_12\\p0061.tr', 'tesseract_output\\Not_12\\p0062.tr', 'tesseract_output\\Not_12\\p0063.tr', 'tesseract_output\\Not_12\\p0064.tr', 'tesseract_output\\Not_12\\p0065.tr', 'tesseract_output\\Not_12\\p0066.tr', 'tesseract_output\\Not_12\\p0067.tr', 'tesseract_output\\Not_12\\p0068.tr', 'tesseract_output\\Not_12\\p0069.tr', 'tesseract_output\\Not_12\\p0070.tr', 'tesseract_output\\Not_12\\p0071.tr', 'tesseract_output\\Not_12\\p0072.tr', 'tesseract_output\\Not_12\\p0073.tr', 'tesseract_output\\Not_12\\p0074.tr', 'tesseract_output\\Not_12\\p0075.tr', 'tesseract_output\\Not_12\\p0076.tr', 'tesseract_output\\Not_12\\p0077.tr', 'tesseract_output\\Not_12\\p0078.tr', 'tesseract_output\\Not_12\\p0079.tr']
+2024-10-23 20:18:20,486 - INFO - Salida: 
+2024-10-23 20:18:20,487 - INFO - Salida: 
+2024-10-23 20:18:20,487 - ERROR - Error (c贸digo 1): Read shape table tesseract_output/shapetable of 0 shapes
+fontinfo table is of size 16038
+Reading x-heights from tesseract_output\xheights ...
+No valid xheights in tesseract_output\xheights!
+
+2024-10-23 20:18:20,487 - ERROR - Error (c贸digo 1): Read shape table tesseract_output/shapetable of 0 shapes
+fontinfo table is of size 16038
+Reading x-heights from tesseract_output\xheights ...
+No valid xheights in tesseract_output\xheights!
+
+2024-10-23 20:18:20,487 - ERROR - Error en mftraining para el lote 0
+2024-10-23 20:18:20,487 - ERROR - Error en mftraining para el lote 0
+2024-10-23 20:18:20,488 - ERROR - Salida est谩ndar: 
+2024-10-23 20:18:20,488 - ERROR - Salida est谩ndar: 
+2024-10-23 20:18:20,488 - ERROR - Salida de error: Read shape table tesseract_output/shapetable of 0 shapes
+fontinfo table is of size 16038
+Reading x-heights from tesseract_output\xheights ...
+No valid xheights in tesseract_output\xheights!
+
+2024-10-23 20:18:20,488 - ERROR - Salida de error: Read shape table tesseract_output/shapetable of 0 shapes
+fontinfo table is of size 16038
+Reading x-heights from tesseract_output\xheights ...
+No valid xheights in tesseract_output\xheights!
+
+2024-10-23 20:18:20,488 - ERROR - Excepci贸n en mftraining: Error en el lote 0
+2024-10-23 20:18:20,489 - ERROR - Excepci贸n en mftraining: Error en el lote 0
+2024-10-23 20:18:20,489 - ERROR - Detalles del error: Traceback (most recent call last):
+  File "c:\Users\talol\Desktop\Proyecto Traduccion Tiempo Real\train_tesseract_pvz.py", line 417, in stage_run_mftraining
+    raise Exception(f"Error en el lote {i//batch_size}")
+Exception: Error en el lote 0
+
+2024-10-23 20:18:20,490 - ERROR - Detalles del error: Traceback (most recent call last):
+  File "c:\Users\talol\Desktop\Proyecto Traduccion Tiempo Real\train_tesseract_pvz.py", line 417, in stage_run_mftraining
+    raise Exception(f"Error en el lote {i//batch_size}")
+Exception: Error en el lote 0
+
+2024-10-23 20:18:20,491 - ERROR - Error en la etapa run_mftraining: Fallo en la etapa: run_mftraining
+2024-10-23 20:18:20,491 - ERROR - Error en la etapa run_mftraining: Fallo en la etapa: run_mftraining
